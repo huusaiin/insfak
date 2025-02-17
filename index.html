@@ -1,5 +1,15 @@
-<form action="https://forms.gle/XS5TTLaqMXqmcru36" method="GET">
-    <input type="text" name="entry.1271603301" placeholder="Donde fue la segunda geurra minudial?" required>
-    <input type="password" name="entry.1257754249" placeholder="Dime cuando se va Cristano del madrid?" required>
-    <button type="submit">Iniciar sesión</button>
-</form>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const form = new FormData(this);
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLScixbdWi6SxI01JD38odY0Vr0p0ShZB4P51zkqwcBNwFIHjxw/formResponse", {
+        method: "POST",
+        body: form,
+        mode: "no-cors"
+    }).then(() => {
+        document.getElementById("mensaje").innerText = "✅ Datos enviados correctamente";
+        document.getElementById("myForm").reset();
+    }).catch(error => {
+        document.getElementById("mensaje").innerText = "❌ Error al enviar los datos";
+    });
+});
