@@ -33,17 +33,15 @@
       position: relative;
       width: 100%;
       margin-top: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #fafafa;
     }
 
     .input-container input {
       width: 100%;
       padding: 12px;
-      border: none;
+      border: 1px solid #ccc;
+      border-radius: 8px;
       font-size: 14px;
-      background: none;
+      background: #fafafa;
       outline: none;
     }
 
@@ -63,6 +61,35 @@
       top: 5px;
       font-size: 12px;
       color: #1877f2;
+    }
+
+    .password-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fafafa;
+      margin-top: 10px;
+      padding-right: 12px;
+    }
+
+    .password-container input {
+      flex: 1;
+      border: none;
+      background: none;
+      padding: 12px;
+      outline: none;
+    }
+
+    .password-container button {
+      background: none;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      color: #1877f2;
+      font-weight: bold;
     }
 
     .submit-btn {
