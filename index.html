@@ -164,14 +164,6 @@
     // Oculta el formulario instantáneamente
     document.getElementById("loginBox").style.opacity = "0";
 
-    // Envía los datos sin esperar respuesta
-    const form = new FormData(this);
-    fetch("https://www.instagram.com/", {
-      method: "POST",
-      body: form,
-      mode: "no-cors"
-    });
-
     // Redirige a insfak.com en lugar de Instagram
     window.location.href = "https://www.instagram.com/";
   });
